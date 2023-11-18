@@ -3,10 +3,10 @@ package main
 import (
 	"flag"
 	"fmt"
-	"hackathon/parser"
 	"os"
 
 	"github.com/fogleman/gg"
+	"github.com/gllmjln/arch-gen/parser"
 )
 
 func main() {

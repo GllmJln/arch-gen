@@ -1,4 +1,4 @@
-module hackathon
+module github.com/gllmjln/arch-gen
 
 go 1.20
 

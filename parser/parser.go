@@ -1,9 +1,9 @@
 package parser
 
 import (
-	"hackathon/generator"
 	"os"
 
+	"github.com/gllmjln/arch-gen/generator"
 	"gopkg.in/yaml.v3"
 )
 
