@@ -16,6 +16,5 @@ func drawArrow(ctx *gg.Context, x1, y1, x2, y2 float64) {
 	ctx.Stroke()
 
 	//TODO: Add some arrow
-	// ctx.DrawRegularPolygon(x2, y2, )
 
 }

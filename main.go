@@ -23,7 +23,8 @@ func main() {
 
 	flag.Parse()
 
-	nodes, err := parser.ParseInput(inputFile)
+	p := parser.Parser{}
+	err := p.ParseInput(inputFile)
 
 	if err != nil {
 		fmt.Printf("Could not parse file input: %v\n", err)
@@ -34,7 +35,7 @@ func main() {
 	ctx.SetRGB(1, 1, 1)
 	ctx.SetLineWidth(4)
 
-	err = nodes.Draw(ctx, 20, 20)
+	err = p.Root.Draw(ctx, 20, 20)
 
 	if err != nil {
 		fmt.Printf("Could not generate diagram %v\n", err)

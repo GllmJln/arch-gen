@@ -9,6 +9,7 @@ children:
         children:
           - type: Amazon-EventBridge
             title: Updates EventBridge Pipe
+            id: updates-pipe
             children:
               - type: Amazon-Simple-Email-Service
                 title: Update Emailer
@@ -30,6 +31,7 @@ children:
     children:
       - type: Amazon-Simple-Queue-Service
         title: Metrics
+        ref: updates-pipe
         children:
           - type: AWS-Lambda
             title: Metrics service
