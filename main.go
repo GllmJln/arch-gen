@@ -43,4 +43,6 @@ func main() {
 
 	ctx.SavePNG(outputFile)
 
+	fmt.Println("Image generated")
+	fmt.Println("Have a nice day!✨")
 }
