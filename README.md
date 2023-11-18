@@ -2,6 +2,11 @@
 
 A cli tool to generate AWS architecture diagrams from yml files.
 
+I made this at a hackathon so it's clearly missing some features:
+- Cycles. The connections can only go one way
+- Arrows. There are no arrows on the drawn lines
+- Efficient placement of the nodes on the grid
+
 ## Usage
 
 ### Running the tool
