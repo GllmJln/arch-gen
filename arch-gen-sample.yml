@@ -1,0 +1,40 @@
+type: Amazon-API-Gateway
+title: v1/api/resource
+children:
+  - type: AWS-Lambda
+    title: api handler
+    children:
+      - type: Amazon-DynamoDB
+        title: Resource
+        children:
+          - type: Amazon-EventBridge
+            title: Updates EventBridge Pipe
+            children:
+              - type: Amazon-Simple-Email-Service
+                title: Update Emailer
+          - type: AWS-Lambda
+            title: Delete stream
+            children:
+              - type: Amazon-Simple-Notification-Service
+                title: Delete Topic
+                children:
+                  - type: AWS-Lambda
+                    title: Deleter
+                    children:
+                      - type: Amazon-Simple-Storage-Service
+                        title: Resource storage
+
+  - type: AWS-Lambda
+    title: Metrics Lambda
+    scale: 2.0
+    children:
+      - type: Amazon-Simple-Queue-Service
+        title: Metrics
+        children:
+          - type: AWS-Lambda
+            title: Metrics service
+            children:
+              - type: Amazon-DynamoDB
+                title: Metrics table
+              - type: Amazon-Simple-Notification-Service
+                title: Metrics Topic
